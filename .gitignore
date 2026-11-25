@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+__pycache__/
+.env
+.env.*
+!.env.example
+dist/
+build/
+*.dbnode_modules/
+dist/
+.env
+*.db
+.venv/
+__pycache__/
+backend/uploads/

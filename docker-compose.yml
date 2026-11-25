@@ -1,0 +1,17 @@
+# Optional: PostgreSQL with PostGIS for local development.
+#   docker compose up -d
+# Then set in backend/.env:
+#   DATABASE_URL=postgresql+psycopg2://suraksha:suraksha@localhost:5432/suraksha
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: suraksha
+      POSTGRES_PASSWORD: suraksha
+      POSTGRES_DB: suraksha
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
